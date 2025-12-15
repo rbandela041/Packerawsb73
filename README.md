@@ -43,32 +43,38 @@ owners = ["amazon"]: Ensures we only trust official images from Amazon.
 
 4. Build Block
 Terraform
-
+```
 build {
   sources = ["source.amazon-ebs.nginx-image"]
 }
+```
+
 What it does: This is the execution phase. It tells Packer to start the EC2 instance defined in the source block above.
 
-Provisioners
+# Provisioners
 Provisioners are the steps Packer takes inside the server while it is running.
 
-File Provisioner:
+## File Provisioner:
 
 Terraform
 
+```
 provisioner "file" {
   source      = "index.html"
   destination = "/tmp/index.html"
 }
+```
+
 Explanation: Uploads your local index.html (the one with the cool GIF) to the /tmp folder on the AWS server.
 
-Shell Provisioner:
+## Shell Provisioner:
 
 Terraform
-
+```
 provisioner "shell" {
   script = "setup.sh"
 }
+```
 Explanation: Runs the setup.sh script on the server. This script:
 
 Installs Nginx.
