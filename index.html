@@ -5,15 +5,26 @@
     <style>
         body { font-family: 'Courier New', Courier, monospace; background-color: #0d1117; color: #c9d1d9; text-align: center; padding-top: 50px; }
         h1 { color: #58a6ff; }
-        .container { border: 2px solid #0f1e2f; display: inline-block; padding: 20px; border-radius: 10px; background-color: #161b22; }
+        .container { border: 2px solid #30363d; display: inline-block; padding: 20px; border-radius: 10px; background-color: #161b22; }
         img { margin-top: 20px; border-radius: 5px; max-width: 100%; }
+        .info { margin-top: 20px; color: #79c0ff; font-weight: bold; text-align: left; display: inline-block;}
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to AWS class.</h1>
         <p>This is an image deployed with packer.</p>
-        <img src="https://media.giphy.com/media/QuePEMWygd37wjpD5q/giphy.gif" alt="Cool Tech Gif">
+        
+        <img src="matrix.gif" alt="Cool Tech Gif" width="400">
+        
+        <br>
+        <div class="info">
+            <p>SERVER INFO:</p>
+            <ul>
+                <li>Public IP: <span>{{PUBLIC_IP}}</span></li>
+                <li>FQDN: <span>{{FQDN}}</span></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
